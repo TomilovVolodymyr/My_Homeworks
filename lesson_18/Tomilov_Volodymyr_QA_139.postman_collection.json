@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "c42cb215-e0ce-4dba-98ca-e9ad7b53ca9b",
+		"name": "Tomilov Volodymyr QA 139",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50889955",
+		"_collection_link": "https://tomilovvovka777-4823202.postman.co/workspace/QA-Betroot~393919f8-29c8-44f1-81af-2ee1429b56e6/collection/50889955-c42cb215-e0ce-4dba-98ca-e9ad7b53ca9b?action=share&source=collection_link&creator=50889955"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Volodymyr\", \r\n    \"age\": 30, \r\n    \"gender\": \"male\", \r\n    \"city\": \"Lviv\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request/uncorrect name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Volodymyr\", \r\n    \"age\": 30, \r\n    \"gender\": \"male\", \r\n    \"city\": \"Lviv\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_URL}}/{{path}}/{{resourse}}?id=c67aad2c-4678-4cd1-a05b-ad6702e8953a\n",
+					"host": [
+						"{{base_URL}}"
+					],
+					"path": [
+						"{{path}}",
+						"{{resourse}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "c67aad2c-4678-4cd1-a05b-ad6702e8953a\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Nikolay\",\r\n    \"id\":\"5a24c533-a5a7-4b93-8b1d-99a6bb32ff5e\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_URL}}/{{path}}/{{resourse}}",
+					"host": [
+						"{{base_URL}}"
+					],
+					"path": [
+						"{{path}}",
+						"{{resourse}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_URL}}/{{path}}/{{resourse}}?id=5a24c533-a5a7-4b93-8b1d-99a6bb32ff5e",
+					"host": [
+						"{{base_URL}}"
+					],
+					"path": [
+						"{{path}}",
+						"{{resourse}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5a24c533-a5a7-4b93-8b1d-99a6bb32ff5e"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
